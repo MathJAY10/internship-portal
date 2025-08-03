@@ -47,25 +47,27 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-white p-4 font-sans">
       <Toaster position="top-center" />
 
-      <div className="relative mb-10">
-        <div className="absolute inset-0 bg-blue-200 blur-md opacity-30 rounded-xl" />
-        <div className="relative z-10 flex flex-col items-center text-center">
-          <h1 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-indigo-500 to-purple-600 drop-shadow-lg mb-4 animate-pulse">
-            Internship & Volunteer Portal
-          </h1>
-          <p className="text-lg text-blue-700 max-w-xl">
-            Start your career journey with hands-on projects, flexible timing, and a verified certificate.
-          </p>
-        </div>
-        <div className="absolute top-0 right-0 mt-4 mr-4 z-20">
-          <button
-            onClick={() => setShowPrompt(true)}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 shadow"
-          >
-            Admin
-          </button>
-        </div>
-      </div>
+      <div className="mb-10 space-y-4">
+    {/* Admin Button */}
+    <div className="flex justify-end">
+      <button
+        onClick={() => setShowPrompt(true)}
+        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 shadow"
+      >
+        Admin
+      </button>
+    </div>
+
+    {/* Heading and Subheading */}
+    <div className="text-center">
+      <h1 className="text-4xl sm:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-indigo-500 to-purple-600 drop-shadow-lg mb-4 animate-pulse">
+        Internship & Volunteer Portal
+      </h1>
+      <p className="text-lg text-blue-700 max-w-xl mx-auto">
+        Start your career journey with hands-on projects, flexible timing, and a verified certificate.
+      </p>
+    </div>
+  </div>
 
       {showPrompt && (
         <div className="mb-6 flex flex-wrap items-center gap-2 justify-center">
